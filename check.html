@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>registration</title>
+<script>
+function msg(){
+var a=document.forms.si;
+for(i=0;i<a.length;i++){
+if(a[i].checked==true) {
+alert("success");
+return true;
+}
+}
+document.getElementById("ss").innerHTML="plz select one";
+return false;
+}
+</script>
+</head>
+<body>
+<form name="forms" onsubmit="return msg()">
+<h1>REGISTARTION</h1>
+NAME:    <input type="text" required><br>
+PHNO:    <input type="number" pattern="[7-9]{1}[0-9]{9}" 
+       title="Phone number with 7-9 and remaing 9 digit with 0-9" required><br>
+SUBJECT INTERESTS:<br>
+<input type="checkbox" name="si" value="ai">
+  <label>ARTIFICIAL INTELLIGENCE</label><br>
+  <input type="checkbox" name="si" value="ml">
+  <label>MACHINE LEARNING</label><br>
+  <input type="checkbox" name="si" value="dt">
+  <label>DATAMINING</label><br>
+  <div><p id="ss"></p></div>
+<br><input type="submit" value="submit"><br>
+
+</form>
+</body>
+</html>
