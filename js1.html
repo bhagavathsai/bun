@@ -1,8 +1,13 @@
 <html>
 <body>
+<p id="demo"></p>
 <script>
-var n1=[1,2,3,4,5]
-document.write(n1[3].toString());
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+
+document.getElementById("demo").innerHTML=multiply(5, 2);
 </script>
 </body>
 </html>
