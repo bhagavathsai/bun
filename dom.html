@@ -1,9 +1,22 @@
 <html>
 <head>
 <script>
+function my(){
 var dt=new Date();
-document.write(dt);
+document.getElementById("r").innerHTML=dt;
+}
+function myf() {
+  var x = document.getElementById("myselect").value;
+  document.getElementById("sel").innerHTML = "You selected: " + x;
+}
 </script>
 <body>
-</body
+<button onclick="my()">click</button>
+<p id="r"></p>
+<select id="myselect" onchange="myf()">
+<option value="dmt">dmt</option>
+  <option value="se">se</option>
+  <option value="cloudcomp">cloudcomp</option></select>
+<p id="sel"></p>
+</body>
 </html>
