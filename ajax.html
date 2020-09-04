@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("text.txt", function(data, status){
+      alert(status);
+      $("#here").html(data);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>click</button>
+<p id="here"></p>
+</body>
+</html>
